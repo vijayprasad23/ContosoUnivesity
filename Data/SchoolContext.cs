@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ContosoUnivesity.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-    public class SchoolContext : DbContext
+public class SchoolContext : IdentityDbContext<IdentityUser>
     {
         public SchoolContext (DbContextOptions<SchoolContext> options)
             : base(options)
